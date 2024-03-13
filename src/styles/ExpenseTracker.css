@@ -1,0 +1,132 @@
+.expense-tracker-container {
+  padding: 20px;
+  border: 2px solid #f0f0f0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  padding: 12px;
+  width: calc(100% - 24px);
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #5d9cec;
+}
+
+.input-field::placeholder {
+  color: #aaaaaa;
+}
+
+.btn-income,
+.btn-expense {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-income {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.btn-expense {
+  background-color: #e74c3c;
+  color: #ffffff;
+  margin-left: 10px; /*left margin added to seperate expbutton from incbutton*/
+}
+
+.btn-income:hover,
+.btn-expense:hover {
+  opacity: 0.8;
+}
+
+.balance {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.transaction-history {
+  margin-top: 30px;
+  
+}
+
+.transaction-item {
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-item.income {
+  
+  border-left: 5px solid #2ecc71;
+}
+
+.transaction-item.expense {
+  
+  border-left: 5px solid #e74c3c;
+}
+
+.transaction-item .description {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.transaction-item .amount {
+  font-weight: bold;
+}
+
+
+.btn-income{
+    
+  margin-top: 20px;
+  margin-right: 10px;
+    
+
+}
+
+.transaction-income{
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(25, 182, 25);
+}
+
+.transaction-expense{
+  font-size: 18px;
+  font-weight: bold;
+  color:red;
+}
+
+.transaction-table{
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.transaction-table th, .transaction-table td{
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.transaction-table th{
+  background-color: #f2f2f2;
+}
