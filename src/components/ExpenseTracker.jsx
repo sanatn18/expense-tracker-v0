@@ -30,7 +30,9 @@ function ExpenseTracker() {
   
   return (
     <div className="expense-tracker-container">
+      
       <h2>Expense Tracker</h2>
+      <div className='inputDiv'>
       <input 
         type='text'
         value={description}
@@ -38,7 +40,8 @@ function ExpenseTracker() {
         placeholder="Enter Description"
         className='input-field'
         />
-        <br/><br/>
+        
+        
       <input
         type="number"
         value={amount}
@@ -46,13 +49,18 @@ function ExpenseTracker() {
         placeholder="Enter Amount"
         className='input-field'
       />
-      <br/>
-    
+      
+      
+      </div>
+      <div className='buttonContainer'>
       <button onClick={ () => addTransaction('Income')} className='btn-income'>Income</button> 
       <button onClick={ () => addTransaction('Expense')} className='btn-expense'>Expense</button>
-     
+      </div>
+
+      
       <h3>Balance: ₹{balance}</h3>
       <h4>Transaction History: </h4>
+      
       <table className='transaction-table'>
         <thead>
           <tr>
@@ -72,6 +80,7 @@ function ExpenseTracker() {
         ))}
       </tbody>
       </table>
+      
     </div>
   );
 }
