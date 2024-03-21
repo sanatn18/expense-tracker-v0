@@ -60,17 +60,20 @@ function SignUp({ onSignUpSuccess }){
         
         try{
             const userCredential = await createUserWithEmailAndPassword(auth, email, password); //create a new user with the builtin firebase authentication function
-            const user = userCredential.user; //extracts "user" object from UserCredential object
+            const user = userCredential.user;//extracts "user" object from UserCredential object
             //more data to display if needed
 
-            const userSetter=await setDoc(doc(db, "users", user.uid),{ //saves the user's username along with the unique usr id
+            // const userSetter=await setDoc(doc(db, "users", user.uid),{ //saves the user's username along with the unique usr id
 
-                username: username,
-            });
+            //     username: username,
+            // });
             
-            console.log(userSetter, "hello");
-            console.log('User Registered:', {username, email});
-            onSignUpSuccess();
+            // console.log(userSetter, "hello");
+            alert("Account Registered. You may now Login");
+            setUsername("");
+            setEmail("");
+            setPassword("");
+            setConPassword("");
         
         } catch(error){
             console.error("Error Signing Up", error.message);
